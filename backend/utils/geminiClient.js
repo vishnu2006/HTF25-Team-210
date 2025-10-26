@@ -48,7 +48,7 @@ Use the provided document context to answer questions. If the answer is not in t
 
 async function generateResponse({ query, context, domain, userId }) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     const prompt = `You are an AI assistant specialized in the ${domain} field.
 Use the provided document context to answer the question accurately and concisely.
@@ -79,7 +79,7 @@ Answer:`;
 
 async function generateSummary(text, domain) {
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     
     const prompt = `Please provide a brief summary (2-3 sentences) of the following document for a ${domain} context:
 
